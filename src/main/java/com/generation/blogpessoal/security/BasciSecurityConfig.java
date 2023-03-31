@@ -34,7 +34,7 @@ public class BasciSecurityConfig {
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and().csrf().disable().cors();
 
         http.authorizeHttpRequests(
-                (auth) -> auth.requestMatchers("/usuarios/logar").permitAll().requestMatchers("/usuarios/cadastrar")
+                (auth) -> auth.requestMatchers("/usuarios/cadastrar").permitAll().requestMatchers("/usuarios/logar")
                         .permitAll().requestMatchers(HttpMethod.OPTIONS).permitAll().anyRequest().authenticated())
                 .httpBasic();
 
