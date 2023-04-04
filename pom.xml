@@ -83,12 +83,6 @@
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 		</dependency>
-		<!-- Dependencia para corrigir erro do não autorizado-->
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpclient</artifactId>
-			<scope>test</scope>
-		</dependency>
 		<!-- Dependencia do PostgreSQL-->
 		<dependency>
 			<groupId>org.postgresql</groupId>

@@ -22,7 +22,7 @@ public class Usuario {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private Long id;
 
 	@NotBlank(message = "O atributo nome é obrigatório")
 	private String name;
@@ -30,7 +30,7 @@ public class Usuario {
 	@Schema(example =  "email@email.com.br")
 	@NotBlank(message = "O atributo usuario é obrigatório")
 	@Email(message = "O usuário precisa ser um email válido") // ANOTAÇÃO PARA VALIDAR O EMAIL
-	private String user;
+	private String email;
 
 	@NotBlank(message = "O atributo senha é obrigatório")
 	@Size(min = 8, message = "A senha deve ter no mínimo 8 caracteres")
@@ -45,11 +45,11 @@ public class Usuario {
 
 	// INSERINDO GETTERS AND SETTERS
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -61,12 +61,12 @@ public class Usuario {
 		this.name = name;
 	}
 
-	public String getUser() {
-		return user;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setUser(String user) {
-		this.user = user;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getPassword() {
@@ -96,7 +96,7 @@ public class Usuario {
 	public Usuario(long id, String name, String user, String password, String photo) {
 		this.id = id;
 		this.name = name;
-		this.user = user;
+		this.email = user;
 		this.password = password;
 		this.photo = photo;
 	}

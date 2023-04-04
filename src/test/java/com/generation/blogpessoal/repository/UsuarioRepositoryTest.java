@@ -38,7 +38,7 @@ public class UsuarioRepositoryTest {
 
 		var usuario = usuarioRepository.findByUser("samuel@email.pf");
 
-		assertTrue(usuario.get().getUser().equals("samuel@email.pf"));
+		assertTrue(usuario.get().getEmail().equals("samuel@email.pf"));
 
 	}
 

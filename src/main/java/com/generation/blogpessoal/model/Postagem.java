@@ -21,7 +21,7 @@ public class Postagem {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private Long id;
 
 	@NotBlank(message = "Esse campo é obrigatório")
 	@Size(min = 5, max = 100, message = "O tamanho minimo é de 05 caracteres e o máximo é 100 caracteres")
@@ -47,7 +47,7 @@ public class Postagem {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

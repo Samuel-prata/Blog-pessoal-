@@ -59,7 +59,7 @@ public class UsuarioControllerTest {
 
 		assertEquals(HttpStatus.CREATED, resposta.getStatusCode());
 		assertEquals(requisicao.getBody().getName(), resposta.getBody().getName());
-		assertEquals(requisicao.getBody().getUser(), resposta.getBody().getUser());
+		assertEquals(requisicao.getBody().getEmail(), resposta.getBody().getEmail());
 	}
 
 	@Test
@@ -94,7 +94,7 @@ public class UsuarioControllerTest {
 
 		assertEquals(HttpStatus.OK, resposta.getStatusCode());
 		assertEquals(requisicao.getBody().getName(), resposta.getBody().getName());
-		assertEquals(requisicao.getBody().getUser(), resposta.getBody().getUser());
+		assertEquals(requisicao.getBody().getEmail(), resposta.getBody().getEmail());
 	}
 
 	@Test

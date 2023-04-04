@@ -18,7 +18,7 @@ private static final long serialVersionUID =1L;
 	private List<GrantedAuthority> authorities;
 	
 	public UserDetailslmpl (Usuario user){
-		this.userName = user.getUser();
+		this.userName = user.getEmail();
 		this.password = user.getPassword();
 	}
 	
