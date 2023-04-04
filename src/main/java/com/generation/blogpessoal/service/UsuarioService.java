@@ -23,7 +23,7 @@ public class UsuarioService {
 
 	public Optional<Usuario> cadastrarUsuario(Usuario usuario) {
 
-		if (usuarioRepository.findByUser(usuario.getEmail()).isPresent()) {
+		if (usuarioRepository.findByEmail(usuario.getEmail()).isPresent()) {
 			return Optional.empty();
 		}
 
@@ -35,7 +35,7 @@ public class UsuarioService {
 	public Optional<Usuario> atualizarUsuario(Usuario usuario) {
 		if (usuarioRepository.findById(usuario.getId()).isPresent()) {
 
-			Optional<Usuario> buscaUsuario = usuarioRepository.findByUser(usuario.getEmail());
+			Optional<Usuario> buscaUsuario = usuarioRepository.findByEmail(usuario.getEmail());
 
 			if ((buscaUsuario.isPresent()) && (buscaUsuario.get().getId() != usuario.getId())) {
 				throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Usuário ja existe", null);
@@ -50,7 +50,7 @@ public class UsuarioService {
 	}
 
 	public Optional<UsuarioLogin> autenticarUsuario(Optional<UsuarioLogin> usuarioLogin) {
-		Optional<Usuario> usuario = usuarioRepository.findByUser(usuarioLogin.get().getEmail());
+		Optional<Usuario> usuario = usuarioRepository.findByEmail(usuarioLogin.get().getEmail());
 
 		if (usuario.isPresent()) {
 

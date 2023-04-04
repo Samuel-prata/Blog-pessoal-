@@ -20,8 +20,8 @@ public class UserDetailsServiceimpl implements UserDetailsService {
 	private UsuarioRepository usuarioRepository;
 	
 	@Override
-	public UserDetails loadUserByUsername(String user) throws UsernameNotFoundException {
-		Optional<Usuario> usuario = usuarioRepository.findByUser(user);
+	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+		Optional<Usuario> usuario = usuarioRepository.findByEmail(email);
 		
 		if(usuario.isPresent()) {
 			return new UserDetailslmpl(usuario.get());

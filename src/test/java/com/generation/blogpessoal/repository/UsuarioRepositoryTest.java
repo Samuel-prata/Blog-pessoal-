@@ -36,7 +36,7 @@ public class UsuarioRepositoryTest {
 	@DisplayName("Retornar 1 usuário")
 	public void RetornarUsuario() {
 
-		var usuario = usuarioRepository.findByUser("samuel@email.pf");
+		var usuario = usuarioRepository.findByEmail("samuel@email.pf");
 
 		assertTrue(usuario.get().getEmail().equals("samuel@email.pf"));
 
