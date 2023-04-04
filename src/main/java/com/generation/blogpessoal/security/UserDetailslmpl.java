@@ -22,9 +22,6 @@ private static final long serialVersionUID =1L;
 		this.password = user.getPassword();
 	}
 	
-	public UserDetailsImpl(){
-	
-	}
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		// TODO Auto-generated method stub
